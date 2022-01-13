@@ -11,11 +11,11 @@ import java.util.List;
  * Github : https://github.com/varunjohn
  */
 public class IOSDialog {
-
     public interface Listener {
         void onClick(IOSDialog iosDialog);
     }
 
+    private int themeResId;
     private String title;
     private String message;
     private String positiveButtonText;
@@ -51,6 +51,10 @@ public class IOSDialog {
 
     public View getView() {
         return view;
+    }
+
+    public int getThemeResId() {
+        return themeResId;
     }
 
     public String getTitle() {
@@ -113,6 +117,11 @@ public class IOSDialog {
 
         public IOSDialog build() {
             return iosDialog;
+        }
+
+        public Builder theme(int resId) {
+            iosDialog.themeResId = resId;
+            return this;
         }
 
         public Builder title(String title) {
