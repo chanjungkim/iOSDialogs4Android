@@ -3,8 +3,9 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">#00000000</item>
-        <item name="colorPrimaryDark">#00303F9F</item>
-        <item name="colorAccent">#00FF4081</item>
+        <item name="colorPrimaryDark">#00000000</item>
+        <item name="colorAccent">#00000000</item>
+        <item name="android:windowBackground">#00000000</item>
     </style>
 
     <style name="AppThemeIosDialog" parent="AppTheme">
@@ -25,5 +26,4 @@
         <item name="cardUseCompatPadding">true</item>
         <item name="contentPadding">0dp</item>
     </style>
-
 </resources>
