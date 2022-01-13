@@ -3,8 +3,10 @@ package com.varunjohn1990.iosdialogs4android;
 import android.animation.Animator;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
@@ -42,6 +44,9 @@ public class IOSDialogView extends AppCompatActivity implements View.OnClickList
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        if(iosDialog.getThemeResId() != 0){
+            setTheme(iosDialog.getThemeResId());
+        }
         overridePendingTransition(0, 0);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_iosdialog);
